@@ -26,7 +26,7 @@
       if (!self.options.selectedItems || self.options.selectedItems.length <= 0) return;
 
       angular.forEach(self.options.selectedItems, function (val, key) {
-        if (!val.id || val.id === '' || val.id < 0) return;
+        if (val.id === undefined || val.id === '' || val.id < 0) return;
 
         filterArray.push({
           control: self,

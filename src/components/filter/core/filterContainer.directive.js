@@ -39,10 +39,6 @@
       fc.filterManager.removeFilter(filter, index);
     };
 
-    fc.deleteFilter = function () {
-      fc.filterManager.deleteSavedFilter();
-    };
-
     function getSelectedFilters() {
       var filters = [];
       angular.forEach(fc.filterManager.filterConfig.controls, function (val, key) {
