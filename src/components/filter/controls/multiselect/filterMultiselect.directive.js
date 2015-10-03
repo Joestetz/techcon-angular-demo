@@ -17,9 +17,7 @@
     };
   }
 
-  ctrlFn.$inject = ['$scope'];
-
-  function ctrlFn($scope) {
+  function ctrlFn() {
     /*jshint validthis: true */
     var vm = this;
 
@@ -31,16 +29,6 @@
 
     vm.dataSource = new kendo.data.DataSource({
       data: vm.controlObj.data
-    });
-
-    $scope.$watchCollection(function () {
-      return vm.controlObj.data;
-    }, function (newVal, oldVal) {
-      if (angular.equals(newVal, oldVal)) return;
-
-      vm.dataSource = new kendo.data.DataSource({
-        data: vm.controlObj.data
-      });
     });
   }
 

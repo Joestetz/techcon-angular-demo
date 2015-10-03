@@ -34,12 +34,6 @@
       return this.options.title + ': ' + filterObj.item.title;
     };
 
-    DropdownFilterControl.prototype.setValue = function (filter) {
-      this.options.selectedItem = filter.item;
-
-      return { control: this, item: filter.item };
-    };
-
     DropdownFilterControl.prototype.clear = function () {
       this.options.selectedItem = null;
     };

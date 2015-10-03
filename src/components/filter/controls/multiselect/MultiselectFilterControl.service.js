@@ -39,15 +39,6 @@
       return this.options.title + ': ' + filterObj.item.title;
     };
 
-    MultiselectFilterControl.prototype.setValue = function (filter) {
-      if (!this.options.selectedItems) {
-        this.options.selectedItems = [];
-      }
-      this.options.selectedItems.push(filter.item);
-
-      return { control: this, item: filter.item };
-    };
-
     MultiselectFilterControl.prototype.clear = function () {
       this.options.selectedItems = null;
     };

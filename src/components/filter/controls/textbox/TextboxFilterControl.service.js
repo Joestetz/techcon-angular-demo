@@ -32,11 +32,6 @@
       return this.options.title + ': ' + filterObj.item;
     };
 
-    TextboxFilterControl.prototype.setValue = function (filter) {
-      this.options.value = filter.item;
-      return { control: this, item: filter.item };
-    };
-
     TextboxFilterControl.prototype.clear = function () {
       this.options.value = '';
     };
