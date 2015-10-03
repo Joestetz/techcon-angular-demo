@@ -23,24 +23,22 @@
     var fc = this;
 
     fc.applyFilters = function () {
+      console.info('clicked apply');
+
       var selectedFilters = getSelectedFilters();
       fc.filterManager.applyFilters(selectedFilters);
     };
 
     fc.clear = function () {
+      console.info('clicked clear');
+
       fc.filterManager.clearSelected();
     };
 
     fc.reset = function () {
+      console.info('clicked reset');
+
       fc.filterManager.resetFilters();
-    };
-
-    fc.removeFilter = function (filter, index) {
-      fc.filterManager.removeFilter(filter, index);
-    };
-
-    fc.deleteFilter = function () {
-      fc.filterManager.deleteSavedFilter();
     };
 
     function getSelectedFilters() {

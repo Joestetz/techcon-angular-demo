@@ -11,19 +11,7 @@
       throw new Error('Not Implemented');
     };
 
-    BaseFilterControl.prototype.displayLabel = function (filterObj) {
-      throw new Error('Not Implemented');
-    };
-
-    BaseFilterControl.prototype.setValue = function (filter) {
-      throw new Error('Not Implemented');
-    };
-
     BaseFilterControl.prototype.clear = function () {
-      throw new Error('Not Implemented');
-    };
-
-    BaseFilterControl.prototype.remove = function (filter) {
       throw new Error('Not Implemented');
     };
 

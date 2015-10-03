@@ -4,9 +4,7 @@
   angular.module('demoApp')
     .factory('FilterManager', FilterManagerFn);
 
-  FilterManagerFn.$inject = ['FilterNotifier'];
-
-  function FilterManagerFn(FilterNotifier) {
+  function FilterManagerFn() {
 
     var FilterManager = function (filterConfig) {
       this.filterConfig = filterConfig;
@@ -16,7 +14,7 @@
     FilterManager.prototype.applyFilters = function (filters) {
       this.appliedFilters = angular.copy(filters);
 
-      FilterNotifier.filterChanged(filters);
+      console.info('appliedFilters', this.appliedFilters);
     };
 
     FilterManager.prototype.clearSelected = function () {
@@ -28,18 +26,8 @@
     FilterManager.prototype.resetFilters = function () {
       this.clearSelected();
       this.appliedFilters.length = 0;
-      FilterNotifier.filterChanged(this.appliedFilters);
-    };
 
-    FilterManager.prototype.removeFilter = function (filter, index) {
-      var removed = this.appliedFilters.splice(index, 1)[0];
-      angular.forEach(this.filterConfig.controls, function (val, key) {
-        if (val.options.dtoKey === filter.control.options.dtoKey) {
-          val.remove(removed);
-        }
-      });
-
-      FilterNotifier.filterChanged(this.appliedFilters);
+      console.info('appliedFilters', this.appliedFilters);
     };
 
     return FilterManager;

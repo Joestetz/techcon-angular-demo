@@ -19,17 +19,4 @@
       </div>
     </form>
   </div>
-
-  <!-- selected filters -->
-  <div class="filter-footer" data-ng-show="fc.filterManager.appliedFilters.length > 0">
-    <ul class="pillbox-container">
-      <li class="pillbox filter-label">Active Filters:</li>
-      <li data-ng-repeat="filter in fc.filterManager.appliedFilters track by $index" class="pillbox">
-        <button class="xBtn remove" data-ng-click="fc.removeFilter(filter, $index)">
-          <i class="icon-delete-outline size-small"></i>
-        </button>
-        <span data-ng-bind="filter | filterLabel"></span>
-      </li>
-    </ul>
-  </div>
 </div>
