@@ -1,0 +1,35 @@
+﻿<div class="filter-container-body">
+  <div id="filter-control" class="filter-controls">
+    <form>
+      <!-- standard filter buttons -->
+      <a id="filter-toggle" class="button secondary filters-toggle active" href="#">
+        Filter <i class="size-xsmall icon-expand"></i>
+      </a>
+      <button class="button borderless secondary" data-ng-click="fc.reset()">
+        <span>Reset</span>
+      </button>
+
+      <!-- advanced filter options -->
+      <div id="advanced-filters">
+        <section data-ng-transclude></section>
+        <section class="button-control">
+          <a class="button size-medium filters-toggle" data-ng-click="fc.applyFilters()">Apply Filters</a>
+          <a class="button secondary borderless" data-ng-click="fc.clear()">Clear</a>
+        </section>
+      </div>
+    </form>
+  </div>
+
+  <!-- selected filters -->
+  <div class="filter-footer" data-ng-show="fc.filterManager.appliedFilters.length > 0">
+    <ul class="pillbox-container">
+      <li class="pillbox filter-label">Active Filters:</li>
+      <li data-ng-repeat="filter in fc.filterManager.appliedFilters track by $index" class="pillbox">
+        <button class="xBtn remove" data-ng-click="fc.removeFilter(filter, $index)">
+          <i class="icon-delete-outline size-small"></i>
+        </button>
+        <span data-ng-bind="filter | filterLabel"></span>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+{
+  "name": "techcon-angular-demo",
+  "version": "0.0.1",
+  "authors": [
+    "Joestetz <Joestetz@gmail.com>"
+  ],
+  "description": "A collection of shared Angular components for use in the Paylocity domain",
+  "main": [ 
+    "lib/citrus.core.css",
+    "lib/kendo.all.js",
+    "lib/kendo.common.css",
+    "lib/kendo.citrus-theme.css"
+  ],
+  "keywords": [
+    "angular",
+    "paylocity",
+    "demo",
+    "techcon"
+  ],
+  "license": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jasmine-core": "~2.3.4",
+    "angular-mocks": "~1.4.1"
+  },
+  "dependencies": {
+    "angular": "~1.4.1",
+    "jquery": "~2.1.4",
+    "angular-ui-router": "~0.2.15"
+  },
+  "overrides": {
+    "angular": {
+      "dependencies": {
+        "jquery": "*"
+      }
+    },
+    "jasmine-core": {
+      "main": [
+        "lib/jasmine-core/jasmine.js",
+        "lib/jasmine-core/jasmine-html.js",
+        "lib/jasmine-core/boot.js",
+        "lib/jasmine-core/jasmine.css"
+      ]
+    }
+  }
+}

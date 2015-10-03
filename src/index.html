@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Paylocity TechCon AngularJS Demo</title>
+
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../lib/citrus.core.css">
+  <link rel="stylesheet" href="../lib/kendo.common.css">
+  <link rel="stylesheet" href="../lib/kendo.citrus-theme.css">
+  <!-- endinject -->
+
+  <!-- src:css -->
+  <link rel="stylesheet" href="../build/components/filter-final/less/filters.css">
+  <!-- endinject -->
+
+  <!-- bower:js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="../lib/kendo.all.js"></script>
+  <!-- endinject -->
+
+  <!-- src:js -->
+  <script src="../build/techcon-demo.tpl.js"></script>
+  <script src="components/filter-final/index.js"></script>
+  <script src="components/filter-final/controls/textbox/TextboxFilterControl.service.js"></script>
+  <script src="components/filter-final/controls/textbox/filterTextbox.directive.js"></script>
+  <script src="components/filter-final/controls/multiselect/MultiselectFilterControl.service.js"></script>
+  <script src="components/filter-final/controls/multiselect/filterMultiselect.directive.js"></script>
+  <script src="components/filter-final/controls/dropdown/filterDropdown.directive.js"></script>
+  <script src="components/filter-final/controls/dropdown/DropdownFilterControl.service.js"></script>
+  <script src="components/filter-final/helpers/filtersToggle.directive.js"></script>
+  <script src="components/filter-final/helpers/filterNotifier.service.js"></script>
+  <script src="components/filter-final/helpers/filterLabel.filter.js"></script>
+  <script src="components/filter-final/controls/BaseFilterControl.service.js"></script>
+  <script src="components/filter-final/core/filterManager.service.js"></script>
+  <script src="components/filter-final/core/filterContainer.directive.js"></script>
+  <script src="index.js"></script>
+  <script src="home/home.controller.js"></script>
+  <script src="router.config.js"></script>
+  <!-- endinject -->
+
+</head>
+<body class="citrus">
+  <div ng-app="demoApp">
+    <div data-ui-view></div>
+  </div>
+</body>
+</html>

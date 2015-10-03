@@ -1,0 +1,55 @@
+﻿(function (window, angular, undefined) {
+  'use strict';
+
+  angular.module('demoApp.filter-final')
+    .factory('DropdownFilterControl', DropdownFilterControlFn);
+
+  DropdownFilterControlFn.$inject = ['BaseFilterControl'];
+
+  function DropdownFilterControlFn(BaseFilterControl) {
+    var DropdownFilterControl = function (options) {
+      this.options = angular.extend({
+        valueType: 0,
+        title: '',
+        data: [],
+        placeholderText: '-- All --',
+        selectedItem: null
+      }, options);
+
+      this.data = this.options.data || [];
+    };
+
+    DropdownFilterControl.prototype = new BaseFilterControl(this.options);
+
+    DropdownFilterControl.prototype.appendSelected = function (filterArray) {
+      if (!this.options.selectedItem || this.options.selectedItem.id === '' || this.options.selectedItem.id < 0) return;
+
+      filterArray.push({
+        control: this,
+        item: this.options.selectedItem
+      });
+    };
+
+    DropdownFilterControl.prototype.displayLabel = function (filterObj) {
+      return this.options.title + ': ' + filterObj.item.title;
+    };
+
+    DropdownFilterControl.prototype.setValue = function (filter) {
+      this.options.selectedItem = filter.item;
+
+      return { control: this, item: filter.item };
+    };
+
+    DropdownFilterControl.prototype.clear = function () {
+      this.options.selectedItem = null;
+    };
+
+    DropdownFilterControl.prototype.remove = function (filter) {
+      if (!filter.item || filter.item.id !== this.options.selectedItem.id) return;
+      this.options.selectedItem = null;
+    };
+
+    return DropdownFilterControl;
+  }
+
+})(window, window.angular);

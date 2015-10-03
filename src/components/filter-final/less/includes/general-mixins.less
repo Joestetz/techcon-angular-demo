@@ -1,0 +1,705 @@
+// .text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+//     text-shadow: @string;
+// }
+
+.box-shadow (@string) {
+    // -webkit-box-shadow: @string;
+    // -moz-box-shadow:    @string;
+    box-shadow:         @string;
+}
+
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+   
+    // -webkit-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    // -moz-box-shadow:    @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    
+    box-shadow:     @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+
+// .inner-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+//     -webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+//     -moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+//     box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+// }
+
+// FOR FUTURE IMPLEMENTATION
+// .inline-icon (@size: 18px, @weight: 500) {
+//     font-family: 'PaylocityIcons';
+//     speak: none;
+//     .font-size(@size);
+//     font-style: normal;
+//     font-weight: @weight;
+//     font-variant: normal;
+//     text-transform: none;
+//     position: absolute;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+// }
+
+.box-sizing (@type: border-box) {
+    
+    // -webkit-box-sizing: @type;
+    // box-sizing: @type;
+    
+    box-sizing: @type;
+}
+
+.border-radius (@radius: 2px) {
+    
+	// -webkit-border-radius: @radius;
+	// -moz-border-radius:    @radius;
+    
+	border-radius:         @radius;
+
+    
+	// -moz-background-clip:    padding;
+	// -webkit-background-clip: padding-box;
+	// background-clip:         padding-box;
+    
+}
+
+.border-radii (@topleft: 0, @topright: 0, @bottomright: 0, @bottomleft: 0) {
+    
+	// -webkit-border-top-right-radius:    @topright;
+	// -webkit-border-bottom-right-radius: @bottomright;
+	// -webkit-border-bottom-left-radius:  @bottomleft;
+	// -webkit-border-top-left-radius:     @topleft;
+
+	// -moz-border-radius-topright:        @topright;
+	// -moz-border-radius-bottomright:     @bottomright;
+	// -moz-border-radius-bottomleft:      @bottomleft;
+	// -moz-border-radius-topleft:         @topleft;
+    
+
+	border-top-right-radius:            @topright;
+	border-bottom-right-radius:         @bottomright;
+	border-bottom-left-radius:          @bottomleft;
+	border-top-left-radius:             @topleft;
+
+	// -moz-background-clip:    padding; 
+	// -webkit-background-clip: padding-box; 
+	// background-clip:         padding-box; 
+}
+
+.opacity (@opacity: 0.5) {
+	@opacityPercentage: @opacity * 100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=@{opacityPercentage})";
+	opacity: @opacity;	
+}
+
+
+// .gradient (@startColor: #eee, @endColor: white) {
+// 	background-color: @startColor;
+// 	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+// 	background: -webkit-linear-gradient(top, @startColor, @endColor);
+// 	background: -moz-linear-gradient(top, @startColor, @endColor);
+// 	background: -ms-linear-gradient(top, @startColor, @endColor);
+// 	background: -o-linear-gradient(top, @startColor, @endColor);
+// }
+// .horizontal-gradient (@startColor: #eee, @endColor: white) {
+//  	background-color: @startColor;
+// 	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+// 	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+// 	background-image: -moz-linear-gradient(left, @startColor, @endColor);
+// 	background-image: -ms-linear-gradient(left, @startColor, @endColor);
+// 	background-image: -o-linear-gradient(left, @startColor, @endColor);
+// }
+
+// .animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+// 	-webkit-animation: @name @duration @delay @ease;
+// 	-moz-animation:    @name @duration @delay @ease;
+// 	-ms-animation:     @name @duration @delay @ease;
+//     animation:     @name @duration @delay @ease;
+// }
+
+
+.transition (@transition) {
+    
+	// -webkit-transition: @transition;  
+	// -moz-transition:    @transition;
+	// -ms-transition:     @transition; 
+    
+	transition:      @transition;  
+}
+
+
+// .transform(@string){
+// 	-webkit-transform: @string;
+// 	-moz-transform: 	 @string;
+// 	-ms-transform: 		 @string;
+// 	-o-transform: 		 @string;
+// }
+// .scale (@factor) {
+// 	-webkit-transform: scale(@factor);
+// 	-moz-transform: 	 scale(@factor);
+// 	-ms-transform: 		 scale(@factor);
+// 	-o-transform: 		 scale(@factor);
+// }
+// .rotate (@deg) {
+// 	-webkit-transform: rotate(@deg);
+// 	-moz-transform: 	 rotate(@deg);
+// 	-ms-transform: 		 rotate(@deg);
+// 	-o-transform: 		 rotate(@deg);
+// }
+// .skew (@deg, @deg2) {
+// 	-webkit-transform:       skew(@deg, @deg2);
+// 	-moz-transform: 	 skew(@deg, @deg2);
+// 	-ms-transform: 		 skew(@deg, @deg2);
+// 	-o-transform: 		 skew(@deg, @deg2);
+// }
+// .translate (@x, @y:0) {
+// 	-webkit-transform:       translate(@x, @y);
+// 	-moz-transform: 	 translate(@x, @y);
+// 	-ms-transform: 		 translate(@x, @y);
+// 	-o-transform: 		 translate(@x, @y);
+// }
+// .translate3d (@x, @y: 0, @z: 0) {
+// 	-webkit-transform:       translate3d(@x, @y, @z);
+// 	-moz-transform: 	 translate3d(@x, @y, @z);
+// 	-ms-transform: 		 translate3d(@x, @y, @z);
+// 	-o-transform: 		 translate3d(@x, @y, @z);
+// }
+// .perspective (@value: 1000) {
+// 	-webkit-perspective: 	@value;
+// 	-moz-perspective: 	@value;
+// 	-ms-perspective: 	@value;
+// 	perspective: 		@value;
+// }
+// .transform-origin (@x:center, @y:center) {
+// 	-webkit-transform-origin: @x @y;
+// 	-moz-transform-origin:    @x @y;
+// 	-ms-transform-origin:     @x @y;
+// 	-o-transform-origin:      @x @y;
+// }
+
+
+
+// ===== REM UNIT MIXINS ====
+@pxtorem-js-function: ~`pxtorem = function(px){if (typeof rmxsBaseFontSize == 'undefined')rmxsBaseFontSize = @{base-font-size-px};return (parseInt(px.replace(/(^\d+)(.+$)/i,'$1')) / rmxsBaseFontSize) }`;
+
+
+// ===== FONT MIXINS =====
+.font-size(@value) { font-size: @value; }
+.font-size(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    font-size: ~'@{rem-value}rem';
+}
+
+// ===== MARGIN MIXINS =====
+// -- One value
+.margin(@value) { margin: @value; }
+.margin(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    margin: ~'@{rem-value}rem';
+}
+// -- Two Values
+.margin(@vvalue, @hvalue) { margin: @arguments; }
+.margin(@vertical, @horizontal) when (ispixel(@vertical)) and (ispixel(@horizontal)) {
+    @first-vvalue: ~`pxtorem('@{vertical}')`;
+    @first-hvalue: ~`pxtorem('@{horizontal}')`;
+    @rem-vvalue: round(@first-vvalue,3);
+    @rem-hvalue: round(@first-hvalue,3);
+    margin: ~'@{rem-vvalue}rem' ~'@{rem-hvalue}rem';
+}
+.margin(@vertical, @horizontal) when (ispixel(@vertical)) and not (ispixel(@horizontal)) {
+    @first-vertical: ~`pxtorem('@{vertical}')`;
+    @rem-vertical: round(@first-vertical,3);
+    .margin(~'@{rem-vertical}rem', @horizontal);
+}
+.margin(@vertical, @horizontal) when (ispixel(@horizontal)) and not (ispixel(@vertical)) {
+    @first-horizontal: ~`pxtorem('@{horizontal}')`;
+    @rem-horizontal: round(@first-horizontal,3);
+    .margin(@vertical, ~'@{rem-horizontal}rem');
+}
+// -- Four Values
+.margin(@top, @right, @bottom, @left) { margin: @arguments; }
+// Convert All
+.margin(@top, @right, @bottom, @left) when (ispixel(@top)) and (ispixel(@right)) and (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-right: ~`pxtorem('@{right}')`;
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-top: round(@first-top,3);
+    @rem-right: round(@first-right,3);
+    @rem-bottom: round(@first-bottom,3);
+    @rem-left: round(@first-left,3);
+    .margin(~'@{rem-top}rem', ~'@{rem-right}rem', ~'@{rem-bottom}rem', ~'@{rem-left}rem');
+}
+// Top Only
+.margin(@top, @right, @bottom, @left) when not (ispixel(@top)) and (ispixel(@right)) and (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-right: ~`pxtorem('@{right}')`;
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-right: round(@first-right,3);
+    @rem-bottom: round(@first-bottom,3);
+    @rem-left: round(@first-left,3);
+    .margin(@top, ~'@{rem-right}rem', ~'@{rem-bottom}rem', ~'@{rem-left}rem');
+}
+// Top and Right
+.margin(@top, @right, @bottom, @left) when not (ispixel(@top)) and not (ispixel(@right)) and (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-bottom: round(@first-bottom,3);
+    @rem-left: round(@first-left,3);
+    .margin(@top, @right, ~'@{rem-bottom}rem', ~'@{rem-left}rem');
+}
+// Top and Bottom
+.margin(@top, @right, @bottom, @left) when not (ispixel(@top)) and (ispixel(@right)) and not (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-right: ~`pxtorem('@{right}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-right: round(@first-right,3);
+    @rem-left: round(@first-left,3);
+    .margin(@top, ~'@{rem-right}rem', @bottom, ~'@{rem-left}rem');
+}
+// Top and Left
+.margin(@top, @right, @bottom, @left) when not (ispixel(@top)) and (ispixel(@right)) and (ispixel(@bottom)) and not (ispixel(@left)) {
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @first-right: ~`pxtorem('@{right}')`;
+    @rem-bottom: round(@first-bottom,3);
+    @rem-right: round(@first-right,3);
+    .margin(@top, ~'@{rem-right}rem', ~'@{rem-bottom}rem', @left);
+}
+// Top and Right and Bottom
+.margin(@top, @right, @bottom, @left) when not (ispixel(@top)) and not (ispixel(@right)) and not (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-left: round(@first-left,3);
+    .margin(@top, @right, @bottom, ~'@{rem-left}rem');
+}
+// Top and Right and Left
+.margin(@top, @right, @bottom, @left) when not (ispixel(@top)) and not (ispixel(@right)) and (ispixel(@bottom)) and not (ispixel(@left)) {
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @rem-bottom: round(@first-bottom,3);
+    .margin(@top, @right, ~'@{rem-bottom}rem', @left);
+}
+// Top and Bottom and Left
+.margin(@top, @right, @bottom, @left) when not (ispixel(@top)) and (ispixel(@right)) and not (ispixel(@bottom)) and not (ispixel(@left)) {
+    @first-right: ~`pxtorem('@{right}')`;
+    @rem-right: round(@first-right,3);
+    .margin(@top, ~'@{rem-right}rem', @bottom, @left);
+}
+// Right only
+.margin(@top, @right, @bottom, @left) when (ispixel(@top)) and not (ispixel(@right)) and (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-top: round(@first-top,3);
+    @rem-bottom: round(@first-bottom,3);
+    @rem-left: round(@first-left,3);
+    .margin(~'@{rem-top}rem', @right, ~'@{rem-bottom}rem', ~'@{rem-left}rem');
+}
+// Right and Bottom
+.margin(@top, @right, @bottom, @left) when (ispixel(@top)) and not (ispixel(@right)) and not (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-top: round(@first-top,3);
+    @rem-left: round(@first-left,3);
+    .margin(~'@{rem-top}rem', @right, @bottom, ~'@{rem-left}rem');
+}
+// Right and Bottom and Left
+.margin(@top, @right, @bottom, @left) when (ispixel(@top)) and not (ispixel(@right)) and not (ispixel(@bottom)) and not (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @rem-top: round(@first-top,3);
+    .margin(~'@{rem-top}rem', @right, @bottom, @left);
+}
+// Right and Left
+.margin(@top, @right, @bottom, @left) when (ispixel(@top)) and not (ispixel(@right)) and (ispixel(@bottom)) and not (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @rem-top: round(@first-top,3);
+    @rem-bottom: round(@first-bottom,3);
+    .margin(~'@{rem-top}rem', @right, ~'@{rem-bottom}rem', @left);
+}
+// Bottom only
+.margin(@top, @right, @bottom, @left) when (ispixel(@top)) and (ispixel(@right)) and not (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-right: ~`pxtorem('@{right}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-top: round(@first-top,3);
+    @rem-right: round(@first-right,3);
+    @rem-left: round(@first-left,3);
+    .margin(~'@{rem-top}rem', ~'@{rem-right}rem', @bottom, ~'@{rem-left}rem');
+}
+// Bottom and Left
+.margin(@top, @right, @bottom, @left) when (ispixel(@top)) and (ispixel(@right)) and not (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-right: ~`pxtorem('@{right}')`;
+    @rem-top: round(@first-top,3);
+    @rem-right: round(@first-right,3);
+    .margin(~'@{rem-top}rem', ~'@{rem-right}rem', @bottom, @left);
+}
+// Left only
+.margin(@top, @right, @bottom, @left) when (ispixel(@top)) and (ispixel(@right)) and (ispixel(@bottom)) and not (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-right: ~`pxtorem('@{right}')`;
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @rem-top: round(@first-top,3);
+    @rem-right: round(@first-right,3);
+    @rem-bottom: round(@first-bottom,3);
+    .margin(~'@{rem-top}rem', ~'@{rem-right}rem', ~'@{rem-bottom}rem', @left);
+}
+.margin-top(@value) { margin-top: @value; }
+.margin-top(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    margin-top: ~'@{rem-value}rem';
+}
+.margin-right(@value) { margin-right: @value; }
+.margin-right(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    margin-right: ~'@{rem-value}rem';
+}
+.margin-bottom(@value) { margin-bottom: @value; }
+.margin-bottom(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    margin-bottom: ~'@{rem-value}rem';
+}
+.margin-left(@value) { margin-left: @value; }
+.margin-left(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    margin-left: ~'@{rem-value}rem';
+}
+
+// ===== PADDING MIXINS =====
+// -- One Value
+.padding(@value) { padding: @value; }
+.padding(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    padding: ~'@{rem-value}rem';
+}
+// -- Two Values
+.padding(@vvalue, @hvalue) { padding: @arguments; }
+.padding(@vertical, @horizontal) when (ispixel(@vertical)) and (ispixel(@horizontal)) {
+    @first-vvalue: ~`pxtorem('@{vertical}')`;
+    @first-hvalue: ~`pxtorem('@{horizontal}')`;
+    @rem-vvalue: round(@first-vvalue,3);
+    @rem-hvalue: round(@first-hvalue,3);
+    padding: ~'@{rem-vvalue}rem' ~'@{rem-hvalue}rem';
+}
+.padding(@vertical, @horizontal) when (ispixel(@vertical)) and not (ispixel(@horizontal)) {
+    @first-vertical: ~`pxtorem('@{vertical}')`;
+    @rem-vertical: round(@first-vertical,3);
+    .padding(~'@{rem-vertical}rem', @horizontal);
+}
+.padding(@vertical, @horizontal) when (ispixel(@horizontal)) and not (ispixel(@vertical)) {
+    @first-horizontal: ~`pxtorem('@{horizontal}')`;
+    @rem-horizontal: round(@first-horizontal,3);
+    .padding(@vertical, ~'@{rem-horizontal}rem');
+}
+// -- Four Value
+.padding(@top, @right, @bottom, @left) { padding: @arguments; }
+// Convert All
+.padding(@top, @right, @bottom, @left) when (ispixel(@top)) and (ispixel(@right)) and (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-right: ~`pxtorem('@{right}')`;
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-top: round(@first-top,3);
+    @rem-right: round(@first-right,3);
+    @rem-bottom: round(@first-bottom,3);
+    @rem-left: round(@first-left,3);
+    .padding(~'@{rem-top}rem', ~'@{rem-right}rem', ~'@{rem-bottom}rem', ~'@{rem-left}rem');
+}
+// Top Only
+.padding(@top, @right, @bottom, @left) when not (ispixel(@top)) and (ispixel(@right)) and (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-right: ~`pxtorem('@{right}')`;
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-right: round(@first-right,3);
+    @rem-bottom: round(@first-bottom,3);
+    @rem-left: round(@first-left,3);
+    .padding(@top, ~'@{rem-right}rem', ~'@{rem-bottom}rem', ~'@{rem-left}rem');
+}
+// Top and Right
+.padding(@top, @right, @bottom, @left) when not (ispixel(@top)) and not (ispixel(@right)) and (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-bottom: round(@first-bottom,3);
+    @rem-left: round(@first-left,3);
+    .padding(@top, @right, ~'@{rem-bottom}rem', ~'@{rem-left}rem');
+}
+// Top and Bottom
+.padding(@top, @right, @bottom, @left) when not (ispixel(@top)) and (ispixel(@right)) and not (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-right: ~`pxtorem('@{right}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-right: round(@first-right,3);
+    @rem-left: round(@first-left,3);
+    .padding(@top, ~'@{rem-right}rem', @bottom, ~'@{rem-left}rem');
+}
+// Top and Left
+.padding(@top, @right, @bottom, @left) when not (ispixel(@top)) and (ispixel(@right)) and (ispixel(@bottom)) and not (ispixel(@left)) {
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @first-right: ~`pxtorem('@{right}')`;
+    @rem-bottom: round(@first-bottom,3);
+    @rem-right: round(@first-right,3);
+    .padding(@top, ~'@{rem-right}rem', ~'@{rem-bottom}rem', @left);
+}
+// Top and Right and Bottom
+.padding(@top, @right, @bottom, @left) when not (ispixel(@top)) and not (ispixel(@right)) and not (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-left: round(@first-left,3);
+    .padding(@top, @right, @bottom, ~'@{rem-left}rem');
+}
+// Top and Right and Left
+.padding(@top, @right, @bottom, @left) when not (ispixel(@top)) and not (ispixel(@right)) and (ispixel(@bottom)) and not (ispixel(@left)) {
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @rem-bottom: round(@first-bottom,3);
+    .padding(@top, @right, ~'@{rem-bottom}rem', @left);
+}
+// Top and Bottom and Left
+.padding(@top, @right, @bottom, @left) when not (ispixel(@top)) and (ispixel(@right)) and not (ispixel(@bottom)) and not (ispixel(@left)) {
+    @first-right: ~`pxtorem('@{right}')`;
+    @rem-right: round(@first-right,3);
+    .padding(@top, ~'@{rem-right}rem', @bottom, @left);
+}
+// Right only
+.padding(@top, @right, @bottom, @left) when (ispixel(@top)) and not (ispixel(@right)) and (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-top: round(@first-top,3);
+    @rem-bottom: round(@first-bottom,3);
+    @rem-left: round(@first-left,3);
+    .padding(~'@{rem-top}rem', @right, ~'@{rem-bottom}rem', ~'@{rem-left}rem');
+}
+// Right and Bottom
+.padding(@top, @right, @bottom, @left) when (ispixel(@top)) and not (ispixel(@right)) and not (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-top: round(@first-top,3);
+    @rem-left: round(@first-left,3);
+    .padding(~'@{rem-top}rem', @right, @bottom, ~'@{rem-left}rem');
+}
+// Right and Bottom and Left
+.padding(@top, @right, @bottom, @left) when (ispixel(@top)) and not (ispixel(@right)) and not (ispixel(@bottom)) and not (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @rem-top: round(@first-top,3);
+    .padding(~'@{rem-top}rem', @right, @bottom, @left);
+}
+// Right and Left
+.padding(@top, @right, @bottom, @left) when (ispixel(@top)) and not (ispixel(@right)) and (ispixel(@bottom)) and not (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @rem-top: round(@first-top,3);
+    @rem-bottom: round(@first-bottom,3);
+    .padding(~'@{rem-top}rem', @right, ~'@{rem-bottom}rem', @left);
+}
+// Bottom only
+.padding(@top, @right, @bottom, @left) when (ispixel(@top)) and (ispixel(@right)) and not (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-right: ~`pxtorem('@{right}')`;
+    @first-left: ~`pxtorem('@{left}')`;
+    @rem-top: round(@first-top,3);
+    @rem-right: round(@first-right,3);
+    @rem-left: round(@first-left,3);
+    .padding(~'@{rem-top}rem', ~'@{rem-right}rem', @bottom, ~'@{rem-left}rem');
+}
+// Bottom and Left
+.padding(@top, @right, @bottom, @left) when (ispixel(@top)) and (ispixel(@right)) and not (ispixel(@bottom)) and (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-right: ~`pxtorem('@{right}')`;
+    @rem-top: round(@first-top,3);
+    @rem-right: round(@first-right,3);
+    .padding(~'@{rem-top}rem', ~'@{rem-right}rem', @bottom, @left);
+}
+// Left only
+.padding(@top, @right, @bottom, @left) when (ispixel(@top)) and (ispixel(@right)) and (ispixel(@bottom)) and not (ispixel(@left)) {
+    @first-top: ~`pxtorem('@{top}')`;
+    @first-right: ~`pxtorem('@{right}')`;
+    @first-bottom: ~`pxtorem('@{bottom}')`;
+    @rem-top: round(@first-top,3);
+    @rem-right: round(@first-right,3);
+    @rem-bottom: round(@first-bottom,3);
+    .padding(~'@{rem-top}rem', ~'@{rem-right}rem', ~'@{rem-bottom}rem', @left);
+}
+.padding-top(@value) { padding-top: @value; }
+.padding-top(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    padding-top: ~'@{rem-value}rem';
+}
+.padding-right(@value) { padding-right: @value; }
+.padding-right(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    padding-right: ~'@{rem-value}rem';
+}
+.padding-bottom(@value) { padding-bottom: @value; }
+.padding-bottom(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    padding-bottom: ~'@{rem-value}rem';
+}
+.padding-left(@value) { padding-left: @value; }
+.padding-left(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    padding-left: ~'@{rem-value}rem';
+}
+
+// ===== POSITION MIXINS =====
+.height(@value) { height: @value; }
+.height(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    height: ~'@{rem-value}rem';
+}
+.min-height(@value) { min-height: @value; }
+.min-height(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    min-height: ~'@{rem-value}rem';
+}
+.max-height(@value) { max-height: @value; }
+.max-height(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    max-height: ~'@{rem-value}rem';
+}
+.width(@value) { width: @value; }
+.width(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    width: ~'@{rem-value}rem';
+}
+.min-width(@value) { min-width: @value; }
+.min-width(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    min-width: ~'@{rem-value}rem';
+}
+.max-width(@value) { max-width: @value; }
+.max-width(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    max-width: ~'@{rem-value}rem';
+}
+.top(@value) { top: @value; }
+.top(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    top: ~'@{rem-value}rem';
+}
+.left(@value) { left: @value; }
+.left(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    left: ~'@{rem-value}rem';
+}
+.right(@value) { right: @value; }
+.right(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    right: ~'@{rem-value}rem';
+}
+.bottom(@value) { bottom: @value; }
+.bottom(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    bottom: ~'@{rem-value}rem';
+}
+.border-right-width(@value) { border-right-width: @value; }
+.border-right-width(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    border-right-width: ~'@{rem-value}rem';
+}
+// -- One Value
+.background-size(@value) { background-size: @value; }
+.background-size(@value) when (ispixel(@value)) {
+    @first-value: ~`pxtorem('@{value}')`;
+    @rem-value: round(@first-value,3);
+    background-size: ~'@{rem-value}rem';
+}
+// -- Two Values
+.background-size(@vvalue, @hvalue) { background-size: @arguments; }
+.background-size(@vertical, @horizontal) when (ispixel(@vertical)) and (ispixel(@horizontal)) {
+    @first-vvalue: ~`pxtorem('@{vertical}')`;
+    @first-hvalue: ~`pxtorem('@{horizontal}')`;
+    @rem-vvalue: round(@first-vvalue,3);
+    @rem-hvalue: round(@first-hvalue,3);
+    background-size: ~'@{rem-vvalue}rem' ~'@{rem-hvalue}rem';
+}
+
+// Clearfix Mixin.
+.clearfix() {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// Zeds Mixins.
+.z-modal-content-level() {
+	z-index: 1200;
+}
+
+.z-modal-dialog-level() {
+	z-index: 1150;
+}
+
+// .z-modal-level() {
+// 	z-index: 1100;
+// }
+
+// .z-modal-backdrop-level() {
+// 	z-index: 1050;
+// }
+
+.z-modal-level() {
+	z-index: 1000;
+}
+
+.z-backdrop-level() {
+	z-index: 900;
+}
+
+.z-popover-level() {
+	z-index: 850;
+}
+
+.z-header-bar-level() {
+	z-index: 820;
+}
+
+.z-header-menu-level() {
+	z-index: 810;
+}
+
+.z-header-level() {
+	z-index: 800;
+}
+
+// .z-alerts-level() {
+// 	z-index: 600;
+// }
+
+// .z-bottom-menu-level() {
+// 	z-index: 500;
+// }
+
+.z-content-level() {
+	z-index: 400;
+}
+
+.z-container-level() {
+	z-index: 300;
+}
+
+.z-active-sliding-menu-level() {
+	z-index: 200;
+}
+
+.z-sliding-menu-level() {
+	z-index: 100;
+}

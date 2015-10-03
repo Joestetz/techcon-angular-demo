@@ -1,0 +1,36 @@
+{
+  "name": "techcon-angular-demo",
+  "version": "0.0.1",
+  "description": "Paylocity TechCon AngularJS Demo",
+  "main": "index.js",
+  "directories": { },
+  "scripts": { },
+  "repository": { },
+  "keywords": [
+    "angular",
+    "paylocity",
+    "demo",
+    "techcon"
+  ],
+  "author": "Joe Stetzer",
+  "license": "",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "browser-sync": "^2.8.2",
+    "gulp": "^3.9.0",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-angular-templatecache": "^1.7.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-inject": "^1.3.1",
+    "gulp-jshint": "^1.11.2",
+    "gulp-less": "^3.0.3",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-size": "^1.2.3",
+    "gulp-sort": "^1.1.1",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.4",
+    "main-bower-files": "^2.8.2"
+  }
+}
