@@ -4,8 +4,7 @@
   angular.module('demoApp', [
     'ui.router',
     'kendo.directives',
-    'techcon-demo.templates',
-    'demoApp.filter-final'
+    'techcon-demo.templates'
   ]);
     
 })(window, window.angular);

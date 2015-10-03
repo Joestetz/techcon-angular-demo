@@ -1,7 +1,7 @@
 ﻿(function (window, angular, undefined) {
   'use strict';
 
-  angular.module('demoApp.filter-final')
+  angular.module('demoApp')
     .directive('filterMultiselect', filterMultiselect);
 
   function filterMultiselect() {
@@ -10,7 +10,7 @@
       scope: {
         controlObj: '='
       },
-      templateUrl: 'components/filter-final/controls/multiselect/filter-multiselect.html',
+      templateUrl: 'components/filter/controls/multiselect/filter-multiselect.html',
       controller: ctrlFn,
       controllerAs: 'vm',
       bindToController: true

@@ -1,7 +1,7 @@
 ﻿(function (window, angular, undefined) {
   'use strict';
 
-  angular.module('demoApp.filter-final')
+  angular.module('demoApp')
     .directive('filtersToggle', filtersToggle);
 
   function filtersToggle() {

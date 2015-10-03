@@ -1,7 +1,7 @@
 ﻿(function (window, angular, undefined) {
   'use strict';
 
-  angular.module('demoApp.filter-final')
+  angular.module('demoApp')
     .directive('filterDropdown', filterDropdown);
 
   function filterDropdown() {
@@ -10,7 +10,7 @@
       scope: {
         controlObj: '='
       },
-      templateUrl: 'components/filter-final/controls/dropdown/filter-dropdown.html',
+      templateUrl: 'components/filter/controls/dropdown/filter-dropdown.html',
       controller: ctrlFn,
       controllerAs: 'vm',
       bindToController: true

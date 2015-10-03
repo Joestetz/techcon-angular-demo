@@ -1,7 +1,7 @@
 ﻿(function (window, angular, undefined) {
   'use strict';
 
-  angular.module('demoApp.filter-final')
+  angular.module('demoApp')
     .directive('filterTextbox', filterTextbox);
 
   function filterTextbox() {
@@ -10,7 +10,7 @@
       scope: {
         controlObj: '='
       },
-      templateUrl: 'components/filter-final/controls/textbox/filter-textbox.html',
+      templateUrl: 'components/filter/controls/textbox/filter-textbox.html',
       controller: ctrlFn,
       controllerAs: 'vm',
       bindToController: true

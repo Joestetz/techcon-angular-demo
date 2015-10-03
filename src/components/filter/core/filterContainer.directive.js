@@ -1,7 +1,7 @@
 ﻿(function (window, angular, undefined) {
   'use strict';
 
-  angular.module('demoApp.filter-final')
+  angular.module('demoApp')
     .directive('filterContainer', filterContainer);
 
   function filterContainer() {
@@ -14,7 +14,7 @@
       controller: FilterController,
       controllerAs: 'fc',
       bindToController: true,
-      templateUrl: 'components/filter-final/core/filter-container.html'
+      templateUrl: 'components/filter/core/filter-container.html'
     };
   }
   
