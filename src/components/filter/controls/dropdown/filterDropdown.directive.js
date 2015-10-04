@@ -10,7 +10,7 @@
       scope: {
         controlObj: '='
       },
-      templateUrl: 'components/filter/controls/dropdown/filter-dropdown.html',
+      templateUrl: 'components/filter/controls/dropdown/filter-dropdown.tpl.html',
       controller: ctrlFn,
       controllerAs: 'vm',
       bindToController: true

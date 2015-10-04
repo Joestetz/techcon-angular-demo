@@ -10,7 +10,7 @@
       scope: {
         controlObj: '='
       },
-      templateUrl: 'components/filter/controls/textbox/filter-textbox.html',
+      templateUrl: 'components/filter/controls/textbox/filter-textbox.tpl.html',
       controller: ctrlFn,
       controllerAs: 'vm',
       bindToController: true

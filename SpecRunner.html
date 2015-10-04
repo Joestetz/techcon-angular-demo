@@ -6,6 +6,9 @@
   
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/jasmine-core/lib/jasmine-core/jasmine.css">
+  <link rel="stylesheet" href="lib/citrus.core.css">
+  <link rel="stylesheet" href="lib/kendo.common.css">
+  <link rel="stylesheet" href="lib/kendo.citrus-theme.css">
   <!-- endinject -->
   
   <!-- bower:js -->
@@ -16,9 +19,11 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+  <script src="lib/kendo.all.js"></script>
   <!-- endinject -->
 
   <!-- src:js -->
+  <script src="build/techcon-demo.tpl.js"></script>
   <script src="src/index.js"></script>
   <script src="src/components/filter/controls/textbox/TextboxFilterControl.service.js"></script>
   <script src="src/components/filter/controls/textbox/filterTextbox.directive.js"></script>
@@ -37,9 +42,14 @@
   <!-- endinject -->
   
   <!-- specs:js -->
-  <script src="src/components/filter/helpers/helpers.spec.js"></script>
-  <script src="src/components/filter/managers/managers.spec.js"></script>
-  <script src="src/components/filter/public/public.spec.js"></script>
+  <script src="src/components/filter/core/filterContainer.directive.spec.js"></script>
+  <script src="src/components/filter/core/filterManager.service.spec.js"></script>
+  <script src="src/components/filter/controls/dropdown/DropdownFilterControl.service.spec.js"></script>
+  <script src="src/components/filter/controls/dropdown/filterDropdown.directive.spec.js"></script>
+  <script src="src/components/filter/controls/multiselect/filterMultiselect.directive.spec.js"></script>
+  <script src="src/components/filter/controls/multiselect/MultiselectFilterControl.service.spec.js"></script>
+  <script src="src/components/filter/controls/textbox/filterTextbox.directive.spec.js"></script>
+  <script src="src/components/filter/controls/textbox/TextboxFilterControl.service.spec.js"></script>
   <!-- endinject -->
 
 </head>

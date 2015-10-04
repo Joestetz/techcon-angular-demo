@@ -95,12 +95,15 @@ gulp.task('inject-app', ['cache-templates', 'lint', 'css'], function () {
 
 gulp.task('inject-tests', ['cache-templates', 'lint'], function () {
   return gulp.src('./SpecRunner.html', { base: './' })
-    .pipe(inject(gulp.src(bower({ includeDev: true })), {
+    .pipe(inject(gulp.src(bower({
+      includeDev: true,
+      includeSelf: true
+    })), {
       name: 'bower',
       relative: false,
       addRootSlash: false
     }))
-    .pipe(inject(gulp.src(['./src/**/*.js', '!./src/**/*.spec.js', './build/angular-paylocity.tpl.js'])
+    .pipe(inject(gulp.src(['./src/**/*.js', '!./src/**/*.spec.js', './build/techcon-demo.tpl.js'])
       .pipe(angularFilesort()), {
         name: 'src',
         relative: false,

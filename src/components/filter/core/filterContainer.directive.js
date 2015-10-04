@@ -14,7 +14,7 @@
       controller: FilterController,
       controllerAs: 'fc',
       bindToController: true,
-      templateUrl: 'components/filter/core/filter-container.html'
+      templateUrl: 'components/filter/core/filter-container.tpl.html'
     };
   }
   
